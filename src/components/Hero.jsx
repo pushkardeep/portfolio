@@ -1,10 +1,10 @@
 import React from "react";
-import Model from "./Model";
+import ModalCanvas from "./canvas";
 
 function Hero() {
   return (
     <div className="w-full min-h-[450px] relative overflow-hidden flex-1 flex flex-col justify-between py-14 sm:px-8 md:px-12 lg:px-24">
-      <Model />
+      <ModalCanvas />
       {/* center  */}
       <div className="w-fit h-fit absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:top-[25%] lg:-translate-y-[25%] text-center z-0 ">
         <div className="w-fi flex justify-center items-center tracking-[-6px]">
