@@ -1,10 +1,13 @@
-import React, { useEffect, useRef, useState } from "react";
-import { Canvas } from "@react-three/fiber";
+import React, { Suspense, useEffect, useRef, useState } from "react";
+import { Canvas, useLoader } from "@react-three/fiber";
 import { Environment, OrbitControls } from "@react-three/drei";
 // 3d model
 import Doll from "../components/Doll";
+import CanvasLoader from "./canvasLoader";
+import { GLTFLoader } from "three/examples/jsm/Addons.js";
 
 function Model() {
+  const { scene } = useLoader(GLTFLoader, "/static/models/doll.glb");
   const [position, setPosition] = useState([0, 3.4, 0]);
   const [scale, setScale] = useState([0.14, 0.14, 0.14]);
 
@@ -32,7 +35,9 @@ function Model() {
             maxPolarAngle={2.1}
             minPolarAngle={2.1}
           />
-          <Doll scale={scale} position={position} rotation={[0, -100, 0]} />
+          <Suspense fallback={<CanvasLoader />}>
+            <Doll scene={scene} scale={scale} position={position} rotation={[0, -100, 0]} />
+          </Suspense>
         </Canvas>
       </div>
     </>

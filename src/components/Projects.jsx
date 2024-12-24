@@ -9,7 +9,6 @@ function Projects() {
 
   return (
     <div
-      data-scroll-section
       className=" w-full min-h-screen overflow-hidden relative px-8 py-4 sm:py-6 sm:px-10 md:px-14 lg:px-24"
     >
       <p className="project-para mx-auto w-full h-fit text-right font-['gil_med'] text-[6vw] sm:text-[4.5vw] md:text-[4vw] lg:text-[3.3vw] leading-[5.5vw] sm:leading-[4vw] md:leading-[3.85vw] lg:leading-[3.2vw]">
