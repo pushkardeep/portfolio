@@ -19,13 +19,13 @@ function App() {
       watch={[]}
       containerRef={containerRef}
     >
-      <div
+      <main
         data-scroll-container
         ref={containerRef}
-        className="main w-full h-fit relative overflow-hidden"
+        className=" main w-full relative overflow-hidden"
       >
         <Landing />
-      </div>
+      </main>
     </LocomotiveScrollProvider>
   );
 }
