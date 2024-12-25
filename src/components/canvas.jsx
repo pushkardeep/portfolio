@@ -2,7 +2,7 @@ import React, { Suspense, useEffect, useRef, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { Environment, Html, OrbitControls } from "@react-three/drei";
 // 3D model component
-import Doll from "./Doll";
+import Doll from "./doll";
 import CanvasLoader from "./canvasLoader"; // Renamed for clarity
 
 // Custom hook to handle responsive positioning and scaling

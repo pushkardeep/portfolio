@@ -3,7 +3,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { HiMenuAlt4 } from "react-icons/hi";
 
-function Nav() {
+function Nav({ setMenu }) {
   useGSAP(() => {
     gsap.from(".nav", {
       y: -100,
@@ -18,10 +18,10 @@ function Nav() {
       <a href="#">Home</a>
       <a href="#">PU.</a>
       <span
-        //   onClick={() => {
-        //     setMenu(true);
-        //   }}
-        className="sm:hidden text-white w-fit h-fit bg-[#333333] py-1 px-3 rounded-full"
+        onClick={() => {
+          setMenu(true);
+        }}
+        className="sm:hidden text-white w-fit h-fit bg-[#333333] hover:bg-[#3d3d3d] py-1 px-3 rounded-full"
       >
         <HiMenuAlt4 className="w-6 h-6" />
       </span>

@@ -1,8 +1,8 @@
 import React, { useRef, useState } from "react";
-import Hero from "../components/Hero";
 import SliderMenu from "../components/sliderMenu";
 import Nav from "../components/nav";
 import Footer from "../components/footer";
+import Hero from "../components/hero";
 
 function Landing() {
   const [isMenu, setMenu] = useState(false);
@@ -16,7 +16,7 @@ function Landing() {
       >
         {/* Index  */}
         <div className="w-full h-screen min-h-fit flex flex-col justify-between items-center overflow-hidden py-10 sm:py-12 px-8 sm:px-16 md:px-20 lg:px-24">
-          <Nav />
+          <Nav setMenu={setMenu} />
           <Hero />
           <Footer />
         </div>

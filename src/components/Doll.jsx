@@ -18,9 +18,8 @@ export default function Doll(props) {
   useGSAP(() => {
     if (groupRef.current) {
       gsap.from(groupRef.current.position, {
-        y: -5,
+        y: -10,
         duration: 0.5,
-        delay: 0.1,
         ease: "back.out(1.7)",
       });
     }
