@@ -1,7 +1,8 @@
 import React, { useRef, useState } from "react";
 import Hero from "../components/Hero";
 import SliderMenu from "../components/sliderMenu";
-import { HiMenuAlt4 } from "react-icons/hi";
+import Nav from "../components/nav";
+import Footer from "../components/footer";
 
 function Landing() {
   const [isMenu, setMenu] = useState(false);
@@ -15,39 +16,9 @@ function Landing() {
       >
         {/* Index  */}
         <div className="w-full h-screen min-h-fit flex flex-col justify-between items-center overflow-hidden py-10 sm:py-12 px-8 sm:px-16 md:px-20 lg:px-24">
-          {/* nav  */}
-          <nav className="w-full f-fit cursor-pointer flex justify-between items-center sm:items-start font-['gil_med'] tracking-[1px] text-[.8rem] text-black relative z-50">
-            <a href="#">Home</a>
-            <a href="#">PU.</a>
-            <span
-              onClick={() => {
-                setMenu(true);
-              }}
-              className="sm:hidden text-white w-fit h-fit bg-[#333333] py-1 px-3 rounded-full"
-            >
-              <HiMenuAlt4 className="w-6 h-6"/>
-            </span>
-            <div className="hidden w-fit h-fit sm:flex flex-col justify-center items-start leading-[14.8px]">
-              <a href="#">Instagram</a>
-              <a href="https://www.linkedin.com/in/pushkardeep-khattri-0b0024312">
-                Linkdin
-              </a>
-              <a href="#">Github</a>
-              <a href="mailto:just.puskardeep@gmail.com">Email</a>
-            </div>
-          </nav>
-
+          <Nav />
           <Hero />
-
-          {/* foooter  */}
-          <footer className="w-full h-fit flex justify-between items-end font-['gil_med'] tracking-[1px] text-[.7rem] text-black relative z-50">
-            <div className="text-left w-[100px] leading-[13px]">
-              MERN Stack Developer
-            </div>
-            <div className="text-right w-[110px] leading-[13px]">
-              Improving myself with REACT Native
-            </div>
-          </footer>
+          <Footer />
         </div>
 
         {/* projects  */}

@@ -1,5 +1,7 @@
 import React from "react";
 import ModalCanvas from "./canvas";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 function Hero() {
   return (
