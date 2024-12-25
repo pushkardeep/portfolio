@@ -4,11 +4,37 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
 function Hero() {
+  useGSAP(() => {
+    const timeline = gsap.timeline();
+    // Animate .left element
+    timeline.from(".left", {
+      x: "-100%",
+      opacity: 0,
+      duration: 0.5,
+      ease: "back.out(1.7)",
+    });
+
+    // Animate .right element after .left
+    timeline.from(".right", {
+      x: "100%",
+      opacity: 0,
+      duration: 0.5,
+      ease: "back.out(1.7)",
+    });
+
+    // Animate .centre element after .right
+    timeline.from(".centre", {
+      scale: 0,
+      opacity: 0,
+      duration: 0.5,
+      ease: "back.out(1.7)",
+    });
+  }, []);
   return (
     <div className="w-full min-h-[450px] relative overflow-hidden flex-1 flex flex-col justify-between py-14 sm:px-8 md:px-12 lg:px-24">
       <ModalCanvas />
       {/* center  */}
-      <div className="w-fit h-fit absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:top-[25%] lg:-translate-y-[25%] text-center z-0 ">
+      <div className="centre w-fit h-fit absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:top-[25%] lg:-translate-y-[25%] text-center z-0 ">
         <div className="w-fi flex justify-center items-center tracking-[-6px]">
           <div className="text-stroke text-[7rem] md:text-[8rem] lg:text-[9rem] font-['gil_bol']">
             W
@@ -25,7 +51,7 @@ function Hero() {
         </div>
       </div>
       {/* my info  */}
-      <div className="w-[220px] h-fit text-left relative z-50 pointer-events-none">
+      <div className="left w-[220px] h-fit text-left relative z-50 pointer-events-none">
         <div className="font-['Zen'] text-[#444444] text-[1.4rem] md:text-[2rem]">
           PUSHKAR
         </div>
@@ -35,7 +61,7 @@ function Hero() {
           design.
         </div>
       </div>
-      <div className="w-[230px] h-fit text-right ml-auto relative z-50 pointer-events-none">
+      <div className="right w-[230px] h-fit text-right ml-auto relative z-50 pointer-events-none">
         <div className="font-['Zen'] text-[#444444] text-[1.4rem] md:text-[2rem]">
           SKILLS
         </div>

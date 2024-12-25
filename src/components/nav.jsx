@@ -9,7 +9,7 @@ function Nav() {
       y: -100,
       opacity: 0,
       duration: 0.5,
-      ease: "power2.in",
+      ease: "back.out(1.7)",
     });
   }, []);
 
