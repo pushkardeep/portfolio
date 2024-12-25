@@ -51,7 +51,7 @@ function SliderMenu({ setMenu }) {
           <span className="text-[18px]">close</span>
           <RiCloseLargeFill className="w-6 h-6 text-black aspect-square rounded-full" />
         </div>
-        <a className="mt-5" href="#" aria-label="Instagram">
+        <a className="mt-5" href="https://www.instagram.com/just_pushkardeep/" aria-label="Instagram">
           Instagram
         </a>
         <hr className="w-[50%] border-[#b6b6b6] mx-auto" />
@@ -64,7 +64,7 @@ function SliderMenu({ setMenu }) {
           LinkedIn
         </a>
         <hr className="w-[50%] border-[#b6b6b6] mx-auto" />
-        <a href="#" aria-label="Github">
+        <a href="https://github.com/Pushkardeep" aria-label="Github">
           Github
         </a>
         <hr className="w-[50%] border-[#b6b6b6] mx-auto" />

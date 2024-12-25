@@ -26,11 +26,11 @@ function Nav({ setMenu }) {
         <HiMenuAlt4 className="w-6 h-6" />
       </span>
       <div className="hidden w-fit h-fit sm:flex flex-col justify-center items-start leading-[14.8px]">
-        <a href="#">Instagram</a>
+        <a href="https://www.instagram.com/just_pushkardeep/">Instagram</a>
         <a href="https://www.linkedin.com/in/pushkardeep-khattri-0b0024312">
           Linkdin
         </a>
-        <a href="#">Github</a>
+        <a href="https://github.com/Pushkardeep">Github</a>
         <a href="mailto:just.pushkardeep@gmail.com">Email</a>
       </div>
     </nav>
