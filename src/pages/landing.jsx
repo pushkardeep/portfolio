@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import SliderMenu from "../components/sliderMenu";
 import Nav from "../components/nav";
 import Footer from "../components/footer";
-import Hero from "../components/Hero"
+import Hero from "../components/hero";
 
 function Landing() {
   const [isMenu, setMenu] = useState(false);
