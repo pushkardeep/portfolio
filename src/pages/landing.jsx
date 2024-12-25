@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import Hero from "../components/Hero";
 import SliderMenu from "../components/sliderMenu";
+import { HiMenuAlt4 } from "react-icons/hi";
 
 function Landing() {
   const [isMenu, setMenu] = useState(false);
@@ -22,9 +23,9 @@ function Landing() {
               onClick={() => {
                 setMenu(true);
               }}
-              className="material-symbols-outlined sm:hidden text-white w-fit h-fit bg-[#333333] py-1 px-3 rounded-full"
+              className="sm:hidden text-white w-fit h-fit bg-[#333333] py-1 px-3 rounded-full"
             >
-              drag_handle
+              <HiMenuAlt4 className="w-6 h-6"/>
             </span>
             <div className="hidden w-fit h-fit sm:flex flex-col justify-center items-start leading-[14.8px]">
               <a href="#">Instagram</a>

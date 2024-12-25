@@ -1,6 +1,6 @@
-import React, { Suspense, useEffect, useState } from "react";
+import React, { Suspense, useEffect, useRef, useState } from "react";
 import { Canvas } from "@react-three/fiber";
-import { Environment, OrbitControls } from "@react-three/drei";
+import { Environment, Html, OrbitControls } from "@react-three/drei";
 // 3D model component
 import Doll from "./Doll";
 import CanvasLoader from "./canvasLoader"; // Renamed for clarity
@@ -51,7 +51,7 @@ const ModalCanvas = () => {
           maxPolarAngle={2.1}
           minPolarAngle={2.1}
         />
-        
+
         {/* Suspense for loading state */}
         <Suspense fallback={<CanvasLoader />}>
           <Doll scale={scale} position={position} rotation={[0, -100, 0]} />

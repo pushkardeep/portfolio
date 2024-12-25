@@ -5,10 +5,20 @@ import { useGSAP } from "@gsap/react";
 
 function SliderMenu({ setMenu }) {
   const unMount = () => {
-    gsap.to(".slider", {
+    const ani1 = gsap.to(".sliderChild", {
       y: "-100%",
       duration: 0.2,
-      onComplete: () => setMenu(false),
+      onComplete: () => {
+        const ani2 = gsap.to(".slider", {
+          duration: 0.15,
+          backgroundColor: "transparent",
+          onComplete: () => {
+            setMenu(false);
+            ani1.kill();
+            ani2.kill();
+          },
+        });
+      },
     });
   };
 
@@ -16,6 +26,12 @@ function SliderMenu({ setMenu }) {
     gsap.from(".slider", {
       y: "-100%",
       duration: 0.2,
+      onComplete: () => {
+        gsap.to(".slider", {
+          duration: 0.15,
+          backgroundColor: "#00000057",
+        });
+      },
     });
   }, []);
 
@@ -24,9 +40,9 @@ function SliderMenu({ setMenu }) {
       data-scroll
       data-scroll-sticky
       data-scroll-target="#container"
-      className="slider sm:hidden w-full min-h-screen bg-black/45 fixed top-0 left-0 z-[999999]"
+      className="slider sm:hidden w-full min-h-screen fixed top-0 left-0 z-[999999]"
     >
-      <div className="w-full min-h-fit bg-white rounded-b-md  flex flex-col justify-center items-center gap-0.5 text-[#404040] font-['gil_med'] text-2xl py-4 px-4">
+      <div className="sliderChild w-full min-h-fit bg-white rounded-b-md  flex flex-col justify-center items-center gap-0.5 text-[#404040] font-['gil_med'] text-2xl py-4 px-4">
         <div
           onClick={unMount}
           className="cursor-pointer w-full flex justify-end items-center gap-1"
