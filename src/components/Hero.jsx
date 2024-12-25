@@ -6,7 +6,6 @@ import gsap from "gsap";
 function Hero() {
   useGSAP(() => {
     const timeline = gsap.timeline();
-    // Animate .left element
     timeline.from(".left", {
       x: "-100%",
       opacity: 0,
@@ -14,7 +13,6 @@ function Hero() {
       ease: "back.out(1.7)",
     });
 
-    // Animate .right element after .left
     timeline.from(".right", {
       x: "100%",
       opacity: 0,
@@ -22,7 +20,6 @@ function Hero() {
       ease: "back.out(1.7)",
     });
 
-    // Animate .centre element after .right
     timeline.from(".centre", {
       scale: 0,
       opacity: 0,
@@ -30,6 +27,7 @@ function Hero() {
       ease: "back.out(1.7)",
     });
   }, []);
+
   return (
     <div className="w-full min-h-[450px] relative overflow-hidden flex-1 flex flex-col justify-between py-14 sm:px-8 md:px-12 lg:px-24">
       <ModalCanvas />
