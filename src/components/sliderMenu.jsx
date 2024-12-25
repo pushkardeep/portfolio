@@ -42,7 +42,7 @@ function SliderMenu({ setMenu }) {
       data-scroll-target="#container"
       className="slider sm:hidden w-full min-h-screen fixed top-0 left-0 z-[999999]"
     >
-      <div className="sliderChild w-full min-h-fit bg-white rounded-b-lg  flex flex-col justify-center items-center gap-0.5 text-[#404040] font-['gil_med'] text-2xl py-4 px-4">
+      <div className="sliderChild w-full min-h-fit bg-white rounded-b-lg  flex flex-col justify-center items-center gap-0.5 text-[#404040] font-['gil_med'] text-2xl py-4 px-6">
         <div
           onClick={unMount}
           className="cursor-pointer w-full flex justify-end items-center gap-1"
