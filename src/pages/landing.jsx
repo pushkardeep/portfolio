@@ -21,7 +21,7 @@ const Landing = forwardRef((prop, ref) => {
         }`}
       >
         <Home setMenu={setMenu} />
-        <Projects />
+        {/* <Projects /> */}
       </div>
     </>
   );
