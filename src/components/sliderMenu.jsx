@@ -37,9 +37,6 @@ function SliderMenu({ setMenu }) {
 
   return (
     <div
-      data-scroll
-      data-scroll-sticky
-      data-scroll-target="#container"
       className="slider sm:hidden w-full min-h-screen fixed top-0 left-0 z-[999999]"
     >
       <div className="sliderChild w-full min-h-fit bg-white rounded-b-lg  flex flex-col justify-center items-center gap-0.5 text-[#404040] font-['gil_med'] text-2xl py-4 px-6">
@@ -51,7 +48,11 @@ function SliderMenu({ setMenu }) {
           <span className="text-[18px]">close</span>
           <RiCloseLargeFill className="w-6 h-6 text-black aspect-square rounded-full" />
         </div>
-        <a className="mt-5" href="https://www.instagram.com/just_pushkardeep/" aria-label="Instagram">
+        <a
+          className="mt-5"
+          href="https://www.instagram.com/just_pushkardeep/"
+          aria-label="Instagram"
+        >
           Instagram
         </a>
         <hr className="w-[50%] border-[#b6b6b6] mx-auto" />

@@ -8,24 +8,17 @@ function App() {
     <LocomotiveScrollProvider
       options={{
         smooth: true,
-        smoothMobile: true, // Enable smooth scrolling on mobile
         smartphone: {
-          smooth: true, // Additional mobile-specific configurations (if needed)
+          smooth: true,
         },
         tablet: {
-          smooth: true, // Additional tablet-specific configurations (if needed)
+          smooth: true,
         },
       }}
       watch={[]}
       containerRef={containerRef}
     >
-      <main
-        data-scroll-container
-        ref={containerRef}
-        className=" main w-full relative overflow-hidden"
-      >
-        <Landing />
-      </main>
+      <Landing ref={containerRef} />
     </LocomotiveScrollProvider>
   );
 }
