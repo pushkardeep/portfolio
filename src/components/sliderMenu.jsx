@@ -69,7 +69,7 @@ function SliderMenu({ setMenu }) {
           Github
         </a>
         <hr className="w-[50%] border-[#b6b6b6] mx-auto" />
-        <a href="mailto:just.puskardeep@gmail.com" aria-label="Email">
+        <a href="mailto:just.pushkardeep@gmail.com" aria-label="Email">
           Email
         </a>
       </div>
