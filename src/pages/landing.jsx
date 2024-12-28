@@ -17,7 +17,7 @@ const Landing = forwardRef((prop, ref) => {
         data-scroll-container
         id="container"
         className={`min-w-[300px] relative overflow-hidden ${
-          isRemoved ? "h-screen" : "h-fit"
+          isRemoved ? "h-fit" : "h-screen"
         }`}
       >
         <Home setMenu={setMenu} />
