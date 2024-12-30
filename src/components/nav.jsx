@@ -20,7 +20,7 @@ function Nav({ setMenu }) {
   }, [isRemoved]);
 
   return (
-    <nav className="nav w-full f-fit cursor-pointer flex justify-between items-center sm:items-start font-['gil_med'] tracking-[1px] text-[.8rem] text-black relative top-[-100%] z-50">
+    <nav className="nav w-full h-fit cursor-pointer flex justify-between items-center sm:items-start font-['gil_med'] tracking-[1px] text-[.8rem] text-black relative top-[-100%] z-50">
       <a href="#">Home</a>
       <a href="#">PU.</a>
       <span

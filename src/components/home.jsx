@@ -3,7 +3,7 @@ import Nav from "./nav";
 import Hero from "./Hero";
 import Footer from "./footer";
 
-function Home({setMenu}) {
+function Home({ setMenu }) {
   return (
     <div
       data-scroll-section

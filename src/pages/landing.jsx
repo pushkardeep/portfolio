@@ -4,27 +4,36 @@ import LoadingScreen from "../components/loadingScreen";
 import { loadingScreenContext } from "../context/loading-screen.context";
 import Home from "../components/home";
 import Projects from "../components/projects";
+import useLocoScroll from "../components/hooks/useLocoScroll";
+import EndFooter from "../components/endFooter";
 
-const Landing = forwardRef((prop, ref) => {
+const Landing = () => {
+  useLocoScroll(true);
   const { isRemoved } = useContext(loadingScreenContext);
   const [isMenu, setMenu] = useState(false);
+
   return (
     <>
+      {/* Show loading screen if isRemoved is false */}
       {!isRemoved && <LoadingScreen />}
+
+      {/* Show menu if isMenu is true */}
       {isMenu && <SliderMenu setMenu={setMenu} />}
+
       <div
-        ref={ref}
         data-scroll-container
         id="container"
-        className={`min-w-[300px] relative overflow-hidden ${
-          isRemoved ? "h-fit" : "h-screen"
-        }`}
+        className="App min-w-[300px] overflow-hidden relative"
       >
+        {/* Show only the Home component while isRemoved is false */}
         <Home setMenu={setMenu} />
-        {/* <Projects /> */}
+
+        {/* Only show Projects after isRemoved becomes true */}
+        {isRemoved && <Projects />}
+        {isRemoved && <EndFooter />}
       </div>
     </>
   );
-});
+};
 
 export default Landing;

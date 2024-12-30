@@ -3,20 +3,29 @@
 @tailwind utilities;
 
 * {
-  margin: 0;
-  padding: 0;
+  margin: 0%;
+  padding: 0%;
   box-sizing: border-box;
   user-select: none;
 }
 
 html,
 body {
-  height: 100%;
   width: 100%;
-  min-width: 300px;
+  height: 100%;
 }
 
 .text-stroke {
   -webkit-text-stroke: 1px #3b3b3b;
   color: transparent;
 }
+
+.btn2:hover > a > span {
+  position: relative;
+  left: 3px;
+}
+
+.line-animation-group li:hover hr{
+  left: 0%;
+}
+
