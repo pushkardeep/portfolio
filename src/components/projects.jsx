@@ -135,10 +135,9 @@ function Projects() {
       </div>
       <video
         className="video w-full aspect-video rounded-md -mt-10 min-[300px]:mt-[-12vw]"
-        autoPlay
-        muted
-        loop
-        src="/static/videos/Chainsaw-man.mp4"
+       autoPlay
+       muted
+        src="/static/videos/chainsawman.mp4"
       ></video>
 
       {/* Links  */}
